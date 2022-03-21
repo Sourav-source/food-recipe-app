@@ -1,12 +1,14 @@
 import React from "react";
+import Category from "./components/Category";
 import Pages from "./pages/Pages";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <BrowserRouter>
+      <Category/>
       <Pages />
-    </div>
+    </BrowserRouter>
   );
 }
 

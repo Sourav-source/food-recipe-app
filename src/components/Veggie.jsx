@@ -18,7 +18,7 @@ function Veggie() {
       setVeggie(JSON.parse(check));
     } else {
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
+        `https://api.spoonacular.com/recipes/random?apiKey=b2baf0426c924904be24ddd5fdb79371&number=9&tags=vegetarian`
       );
       const data = await api.json();
       localStorage.setItem("veggie", JSON.stringify(data.recipes));
@@ -38,7 +38,7 @@ function Veggie() {
             gap: "5rem",
           }}
         >
-          {veggie.map((recipe) => {
+          {veggie && veggie.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>

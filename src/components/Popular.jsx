@@ -14,7 +14,7 @@ function Popular() {
   const getPopular = async () => {
     const check = localStorage.getItem("popular");
 
-    if (check) {
+    if (check === undefined) {
       setPopular(JSON.parse(check));
     } else {
       const api = await fetch(

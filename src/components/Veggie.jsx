@@ -14,7 +14,7 @@ function Veggie() {
   const getVeggie = async () => {
     const check = localStorage.getItem("veggie");
 
-    if (check) {
+    if (check === undefined) {
       setVeggie(JSON.parse(check));
     } else {
       const api = await fetch(
